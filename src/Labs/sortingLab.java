@@ -1,10 +1,11 @@
-package practice;
+package Labs;
+
 
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class practiceMain {
+public class sortingLab{
     public static void main(String[] args) {
         // task 1 Bubble Sort
         int[] nums = {3, 1, 4, 2};
@@ -17,6 +18,12 @@ public class practiceMain {
         int[] nums2 = {5, 3, 4, 1};
         selectionSort(nums2);
 
+        //task 3 Insertion Sort
+        int[] nums3 = {9, 1, 8, 2, 7, 3, 6, 5, 4};
+        insertionSort(nums3);
+
+        System.out.println();
+        System.out.println();
 
     }
 
@@ -61,6 +68,24 @@ public class practiceMain {
             System.out.println(h);
         }
         System.out.println("Swap Count: " + swapCount );
+    }
+
+
+    public static void insertionSort(int[] array){
+        for (int i = 1;i<array.length;i++){
+            int temp =array[i];
+            int j = i - 1;
+
+            while (j>= 0 && array[j] > temp){
+                array[j+1] = array[j];
+                j--;
+            }
+            array[j+ 1] = temp;
+        }
+
+        for (int x: array){
+            System.out.print(x + ", ");
+        }
     }
 
 }
