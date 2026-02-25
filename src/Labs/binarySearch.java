@@ -11,13 +11,13 @@ public class binarySearch{
 
         System.out.println(binarySearch(nums, target));
 
-        int[] nums1 = {8,7,8,10,13,16, 16,20};
+        int[] nums1 = {7,8,10,13,16, 16,20};
         int target1 = 16;
 
         System.out.println(findFirstOccurance(nums1, target1));
 
 
-        int[] nums3 = {8,7,8,10,13,16, 16,20};
+        int[] nums3 = {7,8,10,13,16, 16,20};
         int target3 = 17;
 
         System.out.println(searchInsertPosition(nums3, target3));
