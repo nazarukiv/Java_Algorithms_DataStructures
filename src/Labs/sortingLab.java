@@ -25,6 +25,11 @@ public class sortingLab{
         System.out.println();
         System.out.println();
 
+        int[] nums55 = {8,1,5,9,10, 122, 91};
+
+
+
+
     }
 
     public static void bubbleSort(int[] nums){
@@ -86,6 +91,34 @@ public class sortingLab{
         for (int x: array){
             System.out.print(x + ", ");
         }
+    }
+
+    public static void mergeSort(int[] nums){
+        int length = nums.length;
+        if (length<= 1){return;}
+
+        int middle = length / 2;
+        int[] leftArray = new int[middle];
+        int[] rightArray = new int[length - middle];
+
+        int i = 0; // left array
+        int j = 0; // right array
+
+        for(; i < length;i++){
+            if (i < middle){
+                leftArray[i] = nums[i];
+            }
+            else {
+                rightArray[j] = nums[i];
+                j++;
+            }
+        }
+
+        mergeSort(leftArray);
+    }
+
+    private static void merge(int [] leftArray, int[] rightArray, int[] array){
+
     }
 
 }
